@@ -1,4 +1,4 @@
-# promoboek
+# Promoboek Grafische & Digitale Media
 
 > Website Promoboek GDM 2017-18
 
