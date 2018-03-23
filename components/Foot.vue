@@ -9,7 +9,7 @@
 	</footer>
 </template>
 
-<style>
+<style scoped>
 footer::before {
 	content: "";
 	display: block;

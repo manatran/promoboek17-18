@@ -6,7 +6,7 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 	.back,
 	.down {
 		padding: 16px;

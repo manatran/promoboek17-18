@@ -51,7 +51,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.error {
 		flex-direction:column;
 		min-height:40vh;

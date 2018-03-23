@@ -96,7 +96,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.detail {
 		flex-wrap: wrap;
 		flex-direction: row;
@@ -226,9 +226,10 @@
 	}
 
 	.icons {
-		text-align: right;
+		display:flex;
+		flex-direction:row;
+		justify-content:flex-end;
 	}
-
 	.light {
 		opacity: 0.75;
 		font-size: 12px;
@@ -239,9 +240,8 @@
 		text-decoration: none;
 		display:flex;
 		flex-direction:row;
-		align-items:center;
 	}
-	.links a img{
+	.links a i img{
 		height:16px;
 	}
 
@@ -306,6 +306,7 @@
 		display:flex;
 		flex-direction:row;
 	}
+
 
 	@media only screen and (max-width: 1080px) {
 	.detail {

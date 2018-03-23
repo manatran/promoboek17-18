@@ -1,12 +1,13 @@
 <template>
 	<div class="lecturer">
-		<div class="img" :style="'background-image:url(' + thumbnail + ')'"></div>
+		<div v-if="thumbnail" class="img" :style="'background-image:url(' + thumbnail + ')'"></div>
+		<div v-else class="img" :style="'background-image:url(/assets/placeholder_thumb.jpg);'"></div>
 			<p>{{firstName}}
 			<br>{{name}}</p>
 		</div>
 </template>
 
-<script>
+<script scoped>
 	export default {
 		props: ['firstName', 'name', 'thumbnail']
 	}

@@ -12,7 +12,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.video-container {
 		width: 75%;
 		margin: 24px auto;

@@ -51,7 +51,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	header,
 	main {
 		flex-direction: column;

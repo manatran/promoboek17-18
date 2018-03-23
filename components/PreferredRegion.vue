@@ -8,7 +8,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 .pref_region{
 	display:inline;
 }

@@ -9,7 +9,7 @@
 	</nav>
 </template>
 
-<style>
+<style scoped>
 nav {
 	flex-direction: row;
 	-webkit-user-select: none;

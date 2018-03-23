@@ -13,7 +13,7 @@
 	</section>
 </template>
 
-<script>
+<script scoped>
 	export default {
 		props: ['identifier', 'thumbnail', 'firstName', 'name', 'minor']
 	}
