@@ -9,29 +9,32 @@
 				</h2>
 			</section>
 			<figure class="picture">
-				<img :src="student.picture" :alt="student.first_name + '\'s picture'">
+				<img v-if="student.picture" :src="student.picture" :alt="student.first_name + '\'s picture'">
+				<img v-else src="/assets/placeholder.jpg" alt="This student does not have a picture">
 				<figcaption>{{student.quote}}</figcaption>
 			</figure>
 			<section class="details">
 				<section class="description">
 					<h3>Hey, mijn naam is {{student.first_name}}!</h3>
 					<p>Ik studeerde {{ student.specialization.name }} aan de Arteveldehogeschool in Gent.
-						<br>Zelf woon ik in {{student.city}}.</p>
-					<p>Na mijn studies zou ik graag tewerkgesteld worden in
-						<preferred-region 
-							v-for="city in student.preferred_regions"
-							:key="city"
-							:city="city"
-						/>
+						<br><span v-if="student.city">Zelf woon ik in {{student.city}}.</span></p>
+					<p v-if="student.preferred_regions.length < 0">Na mijn studies zou ik graag tewerkgesteld worden in
+					<ul class="regions">
+						<span v-for="(city, index) in student.preferred_regions" :key="index">
+							<span v-if="index + 1 == student.preferred_regions.length"> of </span>
+							<span>{{city}}</span>
+							<span v-if="index + 1 < student.preferred_regions.length">, &nbsp;</span>
+						</span>
+					</ul>	
 					</p>
-					<p>Als u voor een bedrijf werkt dat iemand met mijn profiel kan gebruiken,
+					<p v-if="student.personal_email">Als u voor een bedrijf werkt dat iemand met mijn profiel kan gebruiken,
 						<br>stuur dan zeker een mail naar
 						<a class="link" :href="'mailto:' + student.personal_email +'?subject=Promoboek 2017-18&body=Beste ' + student.first_name + ', ik zag jouw profiel op de website van het Promoboek van je studierichting en besloot je een mail te sturen.'">{{student.personal_email}}</a>
 					</p>
 				</section>
 				<section class="links">
 					<div class="students">
-						<a class="link" href="/">Bekijk mijn medestudenten</a>
+						<a class="link" href="/"><i><img src="/assets/icons/back.svg" alt="Back"></i>Bekijk mijn medestudenten</a>
 					</div>
 					<div class="social">
 						<p class="light">Promoot deze student op social media</p>
@@ -64,6 +67,7 @@
 		data() {
 			return{
 				student: {
+					preferred_regions: [],
 					specialization: {
 						name: "",
 						option: {
@@ -86,7 +90,6 @@
 				self.student = res.data
 			})
 			.catch((error)=>{
-				
 				window.location.replace("/error")
 			})
 		}
@@ -119,6 +122,7 @@
 		font-style: italic;
 		text-align: center;
 		padding: 16px;
+		line-height:24px;
 	}
 
 	.picture figcaption::before,
@@ -233,6 +237,12 @@
 	.links a {
 		color: white;
 		text-decoration: none;
+		display:flex;
+		flex-direction:row;
+		align-items:center;
+	}
+	.links a img{
+		height:16px;
 	}
 
 	.links img {
@@ -288,6 +298,15 @@
 		width: 24px;
 		border: none;
 	}
+
+	.regions{
+		list-style-type:none;
+		padding:0;
+		margin:0;
+		display:flex;
+		flex-direction:row;
+	}
+
 	@media only screen and (max-width: 1080px) {
 	.detail {
 		flex-direction: column;

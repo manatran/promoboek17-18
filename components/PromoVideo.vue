@@ -1,7 +1,7 @@
 <template>
   <section class="video-container">
 		<div class="video">
-			<iframe :src="url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<iframe :src="url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 	</section>
 </template>

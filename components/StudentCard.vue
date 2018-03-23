@@ -1,7 +1,8 @@
 <template>
   <section class="student">
 		<nuxt-link :to="'student/' + identifier">
-			<img :src="thumbnail" alt="Student">
+			<img v-if="thumbnail" :src="thumbnail" alt="Student">
+			<img v-else src="/assets/placeholder.jpg" alt="Student does not have a picture">
 			<div class="info-container">
 				<div class="student-info">
 					<h2>{{ firstName }} {{ name }}</h2>
@@ -43,7 +44,7 @@
 		right: 0;
 		min-height: 20%;
 		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 1));
-		transition: 0.3s;
+		transition: 0.4s;
 		margin-bottom: 3px;
 	}
 

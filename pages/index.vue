@@ -6,10 +6,9 @@
 			<h2>2017-18</h2>
 		</section>
 
-		<promo-video url="https://player.vimeo.com/video/249935173"/>
+		<promo-video url="https://player.vimeo.com/video/249935173?title=0&byline=0&portrait=0"/>
 		<down-btn/>
 
-		
 	</header>
 	<main class="container students-card">
 		<student-card
