@@ -1,7 +1,15 @@
 <template>
   <section class="student">
 		<nuxt-link :to="'student/' + identifier">
-			<img v-if="thumbnail" :src="thumbnail" alt="Student">
+		<picture v-if="thumbnail">
+			<source media="(min-width: 1920px)" :srcset="thumbnail.original">
+			<source media="(min-width: 1280px)" :srcset="thumbnail.lg">
+			<source media="(min-width: 768px)" :srcset="thumbnail.md">
+			<source media="(min-width: 480px)" :srcset="thumbnail.sm">
+			<source media="(min-width: 200px)" :srcset="thumbnail.thumb">
+			<img :src="thumbnail.thumb" :alt="firstName + '\'s Picture'">
+		</picture>
+			
 			<img v-else src="/assets/placeholder.jpg" alt="Student does not have a picture">
 			<div class="info-container">
 				<div class="student-info">
@@ -31,7 +39,7 @@
 		position: relative;
 	}
 
-	.students-card .student img {
+	.students-card .student picture, .students-card .student img {
 		width: 100%;
 	}
 
@@ -62,6 +70,7 @@
 		font-family: "Montserrat Black";
 		font-weight: 900;
 		font-size: 24px;
+		margin-bottom:0;
 	}
 
 	.students-card .student-info h3 {

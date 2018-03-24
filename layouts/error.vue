@@ -12,14 +12,14 @@
 				:key="lecturer._id"
 				:firstName="lecturer.first_name"
 				:name="lecturer.name" 
-				:thumbnail="lecturer.picture"
+				:thumbnail="lecturer.picture.original"
 			/>
 			<lecturer
 				v-for="lecturer in lecturers"
 				:key="lecturer._id"
 				:firstName="lecturer.first_name"
 				:name="lecturer.name" 
-				:thumbnail="lecturer.picture"
+				:thumbnail="lecturer.picture.original"
 			/>
 			</section>
 		<section class="back">

@@ -9,7 +9,14 @@
 				</h2>
 			</section>
 			<figure class="picture">
-				<img v-if="student.picture" :src="student.picture" :alt="student.first_name + '\'s picture'">
+				<picture v-if="student.picture">
+					<source media="(min-width: 1920px)" :srcset="student.picture.original">
+					<source media="(min-width: 1280px)" :srcset="student.picture.lg">
+					<source media="(min-width: 768px)" :srcset="student.picture.md">
+					<source media="(min-width: 480px)" :srcset="student.picture.sm">
+					<source media="(min-width: 200px)" :srcset="student.picture.thumb">
+					<img :src="student.picture.thumb" :alt="student.firstName + '\'s Picture'">
+				</picture>
 				<img v-else src="/assets/placeholder.jpg" alt="This student does not have a picture">
 				<figcaption>{{student.quote}}</figcaption>
 			</figure>
@@ -18,12 +25,13 @@
 					<h3>Hey, mijn naam is {{student.first_name}}!</h3>
 					<p>Ik studeerde {{ student.specialization.name }} aan de Arteveldehogeschool in Gent.
 						<br><span v-if="student.city">Zelf woon ik in {{student.city}}.</span></p>
-					<p v-if="student.preferred_regions.length < 0">Na mijn studies zou ik graag tewerkgesteld worden in
+					<p v-if="student.preferred_regions.length !== 0">Na mijn studies zou ik graag tewerkgesteld worden in
 					<ul class="regions">
 						<span v-for="(city, index) in student.preferred_regions" :key="index">
-							<span v-if="index + 1 == student.preferred_regions.length"> of </span>
+							<span v-if="index + 1 == student.preferred_regions.length && index != 0">&nbsp;of&nbsp;</span>
 							<span>{{city}}</span>
-							<span v-if="index + 1 < student.preferred_regions.length">, &nbsp;</span>
+							<span v-if="index + 2 < student.preferred_regions.length">,&nbsp;</span>
+							<span v-else-if="index + 1 == student.preferred_regions.length">.</span>
 						</span>
 					</ul>	
 					</p>
