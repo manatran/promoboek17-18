@@ -31,6 +31,7 @@
 	main.students-card {
 		flex-direction: row;
 		flex-wrap: wrap;
+		min-height:150px;
 	}
 
 	.students-card .student {

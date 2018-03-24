@@ -1,8 +1,6 @@
 <template>
   <div class="down">
-		<a href="#" id="scrollBtn">
-			<img src="assets/icons/down.png" alt="down">
-		</a>
+		<img id="scrollBtn" src="assets/icons/down.png" alt="down">
 	</div>
 </template>
 
@@ -25,14 +23,14 @@
 	}
 
 	.back a:hover,
-	.down a:hover {
+	.down img:hover {
 		background: linear-gradient(to right, #CA4753, #303880);
 		color: white;
 		font-weight: 500;
 		border-color: #303880;
 	}
-	.down a:hover img{
-		filter:invert();
+	.down:hover img{
+
 	}
 
 	.down {
@@ -52,10 +50,10 @@
 		border-radius: 4px;
 	}
 
-	.down a {
-		padding: 8px;
+	.down img {
 		height: 24px;
 		width: 24px;
-		border: none;
+		border-radius:50%;
+		padding:4px;
 	}
 </style>

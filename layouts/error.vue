@@ -12,14 +12,14 @@
 				:key="lecturer._id"
 				:firstName="lecturer.first_name"
 				:name="lecturer.name" 
-				:thumbnail="lecturer.picture.original"
+				:thumbnail="lecturer.picture"
 			/>
 			<lecturer
 				v-for="lecturer in lecturers"
-				:key="lecturer._id"
+				:key="lecturer._id + '2'"
 				:firstName="lecturer.first_name"
 				:name="lecturer.name" 
-				:thumbnail="lecturer.picture.original"
+				:thumbnail="lecturer.picture"
 			/>
 			</section>
 		<section class="back">
@@ -101,7 +101,7 @@
 		display: flex;
 		flex-direction: row;
 		overflow: hidden;
-		animation: bannermove 80s linear infinite;
+		animation: bannermove 120s linear infinite;
 		margin-bottom: 40px;
 	}
 

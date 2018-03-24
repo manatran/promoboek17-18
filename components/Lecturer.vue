@@ -1,9 +1,9 @@
 <template>
 	<div class="lecturer">
-		<div v-if="thumbnail" class="img" :style="'background-image:url(' + thumbnail + ')'"></div>
+		<div v-if="thumbnail" class="img" :style="'background-image:url(' + thumbnail.original + ')'"></div>
 		<div v-else class="img" :style="'background-image:url(/assets/placeholder_thumb.jpg);'"></div>
-			<p>{{firstName}}
-			<br>{{name}}</p>
+			<p>{{firstName}}<br>
+			{{name}}</p>
 		</div>
 </template>
 
