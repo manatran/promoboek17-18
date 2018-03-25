@@ -15,7 +15,7 @@
 					<source media="(min-width: 768px)" :srcset="student.picture.md">
 					<source media="(min-width: 480px)" :srcset="student.picture.sm">
 					<source media="(min-width: 200px)" :srcset="student.picture.thumb">
-					<img :src="student.picture.thumb" :alt="student.firstName + '\'s Picture'">
+					<img :src="student.picture.md" :alt="student.firstName + '\'s Picture'">
 				</picture>
 				<img v-else src="/assets/placeholder.jpg" alt="This student does not have a picture">
 				<figcaption v-if="student.quote">{{student.quote}}</figcaption>
