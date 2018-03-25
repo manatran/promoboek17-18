@@ -10,12 +10,11 @@
 			</section>
 			<figure class="picture">
 				<picture v-if="student.picture">
-					<source media="(min-width: 1280px)" :srcset="student.picture.original">
-					<source media="(min-width: 853px)" :srcset="student.picture.lg">
-					<source media="(min-width: 512px)" :srcset="student.picture.md">
+					<source media="(min-width: 1080px)" :srcset="student.picture.md">
+					<source media="(min-width: 720px)" :srcset="student.picture.md">
 					<source media="(min-width: 320px)" :srcset="student.picture.sm">
-					<source media="(min-width: 133px)" :srcset="student.picture.thumb">
-					<img :src="student.picture.md" :alt="student.firstName + '\'s Picture'">
+					<source media="(min-width: 200px)" :srcset="student.picture.thumb">
+					<img :src="student.picture.original" :alt="student.firstName + '\'s Picture'">
 				</picture>
 				<img v-else src="/assets/placeholder.jpg" alt="This student does not have a picture">
 				<figcaption v-if="student.quote">{{student.quote}}</figcaption>

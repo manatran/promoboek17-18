@@ -2,12 +2,9 @@
   <section class="student">
 		<nuxt-link :to="'student/' + identifier">
 		<picture v-if="thumbnail">
-			<source media="(min-width: 1280px)" :srcset="thumbnail.original">
-			<source media="(min-width: 853px)" :srcset="thumbnail.lg">
-			<source media="(min-width: 512px)" :srcset="thumbnail.md">
-			<source media="(min-width: 320px)" :srcset="thumbnail.sm">
-			<source media="(min-width: 133px)" :srcset="thumbnail.thumb">
-			<img :src="thumbnail.md" :alt="firstName + '\'s Picture'">
+			<source media="(min-width: 720px)" :srcset="thumbnail.sm">
+			<source media="(min-width: 200px)" :srcset="thumbnail.thumb">
+			<img :src="thumbnail.thumb" :alt="firstName + '\'s Picture'">
 		</picture>
 			
 			<img v-else src="/assets/placeholder.jpg" alt="Student does not have a picture">

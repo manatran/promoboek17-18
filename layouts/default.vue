@@ -21,7 +21,7 @@
 
 <style>
 	:root {
-		font-family: "Montserrat", sans-serif;
+		font-family: "Montserrat Regular", sans-serif;
 		font-size: 16px;
 		color: white;
 	}
