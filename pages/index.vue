@@ -77,7 +77,7 @@
 		},
 		created(){
 			const self = this
-			axios.get("http://localhost:5000/api/v1/users/student")
+			axios.get("http://192.168.0.228:5000/api/v1/users/student")
 			.then((res)=>{
 				self.students = res.data
 			})
