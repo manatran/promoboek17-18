@@ -18,7 +18,7 @@
 					<img :src="student.picture.thumb" :alt="student.firstName + '\'s Picture'">
 				</picture>
 				<img v-else src="/assets/placeholder.jpg" alt="This student does not have a picture">
-				<figcaption>{{student.quote}}</figcaption>
+				<figcaption v-if="student.quote">{{student.quote}}</figcaption>
 			</figure>
 			<section class="details">
 				<section class="description">
@@ -47,13 +47,13 @@
 					<div class="social">
 						<p class="light">Promoot deze student op social media</p>
 						<section class="icons">
-							<a href="#">
+							<a :href="'https://www.facebook.com/sharer/sharer.php?u=' + currURL" target="_blank">
 								<img src="/assets/icons/facebook.png" alt="Facebook">
 							</a>
-							<a href="#">
+							<a :href="'https://twitter.com/share?url=' + currURL + '&text=Dit+is+'+student.first_name+'&via=ArteveldehsGent&hashtags=GDM,' + student.specialization.option.abbreviation" target="_blank">
 								<img src="/assets/icons/twitter.png" alt="Twitter">
 							</a>
-							<a href="#">
+							<a :href="'https://linkedin.com/shareArticle?url=' + currURL +'&title=Dit+is+' + student.first_name" target="_blank">
 								<img src="/assets/icons/linkedin.png" alt="LinkedIn">
 							</a>
 						</section>
@@ -74,6 +74,7 @@
 		},
 		data() {
 			return{
+				currURL:'',
 				student: {
 					preferred_regions: [],
 					specialization: {
@@ -87,6 +88,7 @@
 		},
 		created(){
 			if(typeof window !== "undefined"){
+				this.currURL = window.location.href;
 				if(this.$route.params.id == "" || this.$route.params.id == undefined){
 					window.location.replace('/error')
 				}
