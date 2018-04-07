@@ -65,7 +65,7 @@
 	}
 
 	.error h2 {
-		font-family:"Montserrat";
+		font-family:"Montserrat", "Arial", sans-serif;
 		font-weight:400;
 		line-height: 48px;
 		font-size:32px;
