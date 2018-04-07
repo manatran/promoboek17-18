@@ -70,7 +70,7 @@
 		line-height: 48px;
 		font-size:32px;
 		margin:0;
-		font-weight:500;
+		font-weight:400;
 	}
 	.back,
 	.down {
@@ -94,7 +94,7 @@
 	.down a:hover {
 		background: linear-gradient(to right, #CA4753, #303880);
 		color: white;
-		font-weight: 500;
+		font-weight: 400;
 		border-color: #303880;
 	}
 

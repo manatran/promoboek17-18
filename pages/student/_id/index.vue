@@ -127,7 +127,7 @@
 
 	.picture figcaption {
 		font-size: 14px;
-		font-weight: 200;
+		font-weight: 300;
 		font-style: italic;
 		text-align: center;
 		padding: 16px;
@@ -281,7 +281,7 @@
 	.down a:hover {
 		background: linear-gradient(to right, #CA4753, #303880);
 		color: white;
-		font-weight: 500;
+		font-weight: 400;
 		border-color: #303880;
 	}
 

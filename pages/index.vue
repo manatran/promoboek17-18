@@ -166,7 +166,7 @@
 	}
 	.specializations span{
 		display:inline-block;
-		font-weight:bold;
+		font-weight:900;
 		padding:10px;
 		cursor:pointer;
 		border-bottom:solid 1px transparent;
