@@ -88,7 +88,7 @@
 		}
 		.students-card .student-info h2 {
 			font-family: "Montserrat", "Arial", sans-serif;
-			font-weight: 400;
+			font-weight: 900;
 			font-size: 16px;
 		}
 		.students-card .student-info h3 {
