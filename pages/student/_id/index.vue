@@ -158,7 +158,8 @@
 
 	.info h1 {
 		margin:0;
-		font-family: "Montserrat Black";
+		font-family: "Montserrat", "Arial", sans-serif;
+		font-weight:900;
 		font-size: 48px;
 	}
 
@@ -169,13 +170,13 @@
 	}
 
 	.info .minor {
-		font-family: "Montserrat";
-		font-weight: 500;
+		font-family: "Montserrat", "Arial", sans-serif;
+		font-weight: 400;
 	}
 
 	.info .major {
-		font-family: "Montserrat Thin";
-		font-weight: lighter;
+		font-family: "Montserrat", "Arial", sans-serif;
+		font-weight: 300;
 		font-size: 20px;
 		padding-left: 16px;
 	}
@@ -198,13 +199,13 @@
 
 	.description h3 {
 		margin: 0;
-		font-family: "Montserrat";
-		font-weight: 500;
+		font-family: "Montserrat", "Arial", sans-serif;
+		font-weight: 400;
 		font-size: 24px;
 	}
 
 	.description p {
-		font-family: "Montserrat Light";
+		font-family: "Montserrat", "Arial", sans-serif;
 		font-weight: 300;
 		line-height: 24px;
 	}

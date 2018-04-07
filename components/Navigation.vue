@@ -21,7 +21,8 @@ nav {
 nav .logo a {
 	color: white;
 	text-decoration: none;
-	font-family: "Montserrat Light";
+	font-family: "Montserrat", "Arial", sans-serif;
+	font-weight:300;
 	display: flex;
 	flex-direction: row;
 	align-items: baseline;

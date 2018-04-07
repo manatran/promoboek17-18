@@ -57,14 +57,16 @@
 		min-height:40vh;
 	}
 	.error h1 {
-		font-family:"Montserrat Black";
+		font-family:"Montserrat", "Arial", sans-serif;
+		font-weight:900;
 		font-size: 48px;
 		margin-top: 48px;
 		margin-bottom: 32px;
 	}
 
 	.error h2 {
-		font-family:"Montserrat Regular";
+		font-family:"Montserrat";
+		font-weight:400;
 		line-height: 48px;
 		font-size:32px;
 		margin:0;

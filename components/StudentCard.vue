@@ -65,15 +65,15 @@
 	}
 
 	.students-card .student-info h2 {
-		font-family: "Montserrat Black";
+		font-family: "Montserrat", "Arial", sans-serif;
 		font-weight: 900;
 		font-size: 24px;
 		margin-bottom:0;
 	}
 
 	.students-card .student-info h3 {
-		font-family: "Montserrat Light";
-		font-weight: 200;
+		font-family: "Montserrat", "Arial", sans-serif;
+		font-weight: 300;
 		font-size: 14px;
 		margin: 4px 0 0 0;
 	}
@@ -87,8 +87,8 @@
 			width: calc(50% - 16px);
 		}
 		.students-card .student-info h2 {
-			font-family: "Montserrat Regular";
-			font-weight: 600;
+			font-family: "Montserrat", "Arial", sans-serif;
+			font-weight: 400;
 			font-size: 16px;
 		}
 		.students-card .student-info h3 {

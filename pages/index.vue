@@ -117,7 +117,8 @@
 
 
 	h1 {
-		font-family: "Montserrat Black";
+		font-family: "Montserrat", "Arial", sans-serif;
+		font-weight:900;
 		font-size: 48px;
 		color: white;
 		margin: 0;
@@ -125,7 +126,8 @@
 
 	h2 {
 		margin: 0;
-		font-family: "Montserrat Light";
+		font-family: "Montserrat", "Arial", sans-serif;
+		font-weight: 300;
 		font-size: 32px;
 	}
 	.students-cards{
